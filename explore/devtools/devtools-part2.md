@@ -1,0 +1,2 @@
+1. The bug was that the num1 and num2 values were being treated as strings, since values taken from input fields using .value are always strings in JavaScript. This caused JavaScript to concatenate the values instead of adding them. For example, entering 2 and 3 resulted in "2" + "3" which gave "23" instead of the expected 5.
+2. To fix the bug, I would convert the string inputs to numbers using the Number() function when retrieving the values from the input fields. This ensures numeric addition instead of string concatenation.
